@@ -22,7 +22,7 @@ var zodiacs = [
 },
 {
 	name: "Leo",
-	name: "July 23 - August 22",
+	month: "July 23 - August 22",
 	description: "Leo - the Lion in the Cave The story of the Lion always speaks of bravery. This is an animal fearless and impossible to challenge, hurt or destroy, their only weaknesses being fear and aggression towards those they confront. Living in a cave, a Lion always needs to have one, nesting and finding comfort in hard times. However, they should never stay there for long. With their head high, they have to face others with dignity and respect, never raising a voice, a hand, or a weapon, bravely walking through the forest they rule."
 },
 {
@@ -62,3 +62,14 @@ var zodiacs = [
 }
 
 ]
+
+function getData(){
+	var userSearch = document.getElementById('user-search').value.toLowerCase();
+
+	for (var i = 0; i < zodiacs.length; i++) {
+		if (userSearch === zodiacs[i].name.toLowerCase()){
+			document.getElementById('text-result').innerHTML = zodiacs[i].description;
+		}
+	}
+
+}
